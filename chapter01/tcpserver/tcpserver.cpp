@@ -30,7 +30,7 @@ void main(void)
    SOCKET               NewConnection;
    SOCKADDR_IN          ServerAddr;
    SOCKADDR_IN          ClientAddr;
-   int                  ClientAddrLen;
+   int                  ClientAddrLen = sizeof(ClientAddr);
    int                  Port = 5150;
    int                  Ret;
    char                 DataBuffer[1024];
