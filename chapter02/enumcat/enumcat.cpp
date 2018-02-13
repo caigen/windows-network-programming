@@ -39,7 +39,7 @@ void PrintProtocolInfo(WSAPROTOCOL_INFO *wsapi)
     WCHAR       szGuidString[256];
     int		i;
 
-    printf("\nProtocol: %s\n", wsapi->szProtocol);
+    wprintf(L"\nProtocol: %s\n", wsapi->szProtocol);
     printf("           Address Family: ");
     switch (wsapi->iAddressFamily)
     {
