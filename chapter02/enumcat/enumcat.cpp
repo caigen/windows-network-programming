@@ -21,10 +21,10 @@
 #endif
 
 #include <af_irda.h>
-#include <wsrm.h>
+//#include <wsrm.h>
 #include <ws2atm.h>
 #include <wsipx.h>
-#include <atalkwsh.h>
+//#include <atalkwsh.h>
 
 //
 // Function: PrintProtocolInfo
@@ -77,9 +77,9 @@ void PrintProtocolInfo(WSAPROTOCOL_INFO *wsapi)
                 case IPPROTO_ND:
                     printf("IPROTO_ND\n");
                     break;
-                case IPPROTO_RM:
-                    printf("IPPROTO_RM\n");
-                    break;
+                //case IPPROTO_RM:
+                //    printf("IPPROTO_RM\n");
+                //    break;
                 case IPPROTO_RAW:
                     printf("IPROTO_RAW\n");
                     break;
@@ -171,46 +171,46 @@ void PrintProtocolInfo(WSAPROTOCOL_INFO *wsapi)
             printf("                 Protocol: UNKNOWN: %d",
                 wsapi->iProtocol);      
             break;
-        case AF_APPLETALK:
-            printf("AF_APPLETALK\n");
-            printf("                 Protocol: ");      
-            switch (wsapi->iProtocol)
-            {
-                case DDPPROTO_RTMP:
-                    printf("DDPPROTO_RTMP\n");
-                    break;
-                case DDPPROTO_NBP:
-                    printf("DDPPROTO_NBP\n");
-                    break;
-                case DDPPROTO_ATP:
-                    printf("DDPROTO_ATP\n");
-                    break;
-                case DDPPROTO_AEP:
-                    printf("DDPPROTO_AEP\n");
-                    break;
-                case DDPPROTO_RTMPRQ:
-                    printf("DDPPROTO_RTMPRQ\n");
-                    break;
-                case DDPPROTO_ZIP:
-                    printf("DDPPROTO_ZIP\n");
-                    break;
-                case DDPPROTO_ADSP:
-                    printf("DDPPROTO_ADSP\n");
-                    break;
-                case ATPROTO_ADSP:
-                    printf("ATPROTO_ADSP\n");
-                    break;
-                case ATPROTO_ATP:
-                    printf("ATPROTO_ATP\n");
-                    break;
-                case ATPROTO_ASP:
-                    printf("ATPROTO_ASP\n");
-                    break;
-                case ATPROTO_PAP:
-                    printf("ATPROTO_PAP\n");
-                    break;
-            }
-            break;
+        //case AF_APPLETALK:
+        //    printf("AF_APPLETALK\n");
+        //    printf("                 Protocol: ");      
+        //    switch (wsapi->iProtocol)
+        //    {
+        //        case DDPPROTO_RTMP:
+        //            printf("DDPPROTO_RTMP\n");
+        //            break;
+        //        case DDPPROTO_NBP:
+        //            printf("DDPPROTO_NBP\n");
+        //            break;
+        //        case DDPPROTO_ATP:
+        //            printf("DDPROTO_ATP\n");
+        //            break;
+        //        case DDPPROTO_AEP:
+        //            printf("DDPPROTO_AEP\n");
+        //            break;
+        //        case DDPPROTO_RTMPRQ:
+        //            printf("DDPPROTO_RTMPRQ\n");
+        //            break;
+        //        case DDPPROTO_ZIP:
+        //            printf("DDPPROTO_ZIP\n");
+        //            break;
+        //        case DDPPROTO_ADSP:
+        //            printf("DDPPROTO_ADSP\n");
+        //            break;
+        //        case ATPROTO_ADSP:
+        //            printf("ATPROTO_ADSP\n");
+        //            break;
+        //        case ATPROTO_ATP:
+        //            printf("ATPROTO_ATP\n");
+        //            break;
+        //        case ATPROTO_ASP:
+        //            printf("ATPROTO_ASP\n");
+        //            break;
+        //        case ATPROTO_PAP:
+        //            printf("ATPROTO_PAP\n");
+        //            break;
+        //    }
+        //    break;
         case AF_NETBIOS:
             printf("AF_NETBIOS\n");
             printf("                 Protocol: ");      
